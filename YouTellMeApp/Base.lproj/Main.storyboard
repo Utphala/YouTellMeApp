@@ -155,7 +155,7 @@
         <!--Signup View Controller-->
         <scene sceneID="31c-HJ-W5H">
             <objects>
-                <viewController storyboardIdentifier="signup" id="F26-0d-yNo" customClass="SignupViewController" customModule="YouTellMeApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="F26-0d-yNo" customClass="SignupViewController" customModule="YouTellMeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1H1-cr-sgP"/>
                         <viewControllerLayoutGuide type="bottom" id="hjK-07-Zoc"/>
@@ -210,10 +210,21 @@
                                 <rect key="frame" x="154" y="586" width="66" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign up"/>
+                                <connections>
+                                    <action selector="signupTrigger:" destination="F26-0d-yNo" eventType="touchUpInside" id="ITb-UI-rde"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="emailBox" destination="0uA-M3-kyd" id="xwI-FA-C6v"/>
+                        <outlet property="fnameBox" destination="c5m-NN-bdu" id="3j4-jt-sTd"/>
+                        <outlet property="passwordBox" destination="3pE-DX-Dp1" id="OJj-Fo-5dl"/>
+                        <outlet property="phoneNumberBox" destination="S1m-3f-2Xo" id="ffE-03-RYY"/>
+                        <outlet property="repasswordBox" destination="JwK-Z4-wWd" id="Ynp-E6-Ps0"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="signup" id="NTj-gH-Ckj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2JC-6Z-dcT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -285,4 +296,7 @@
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="trx-tB-aGv"/>
+    </inferredMetricsTieBreakers>
 </document>
