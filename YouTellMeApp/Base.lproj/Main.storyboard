@@ -43,6 +43,14 @@
                                     <segue destination="q0I-qE-LJe" kind="show" id="ldk-KM-v5j"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Lu-fc-br2">
+                                <rect key="frame" x="168" y="551" width="38" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Table"/>
+                                <connections>
+                                    <segue destination="84d-bz-SmS" kind="show" id="8EP-Ol-nqe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -63,18 +71,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMZ-dS-gTb">
+                            <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMZ-dS-gTb">
                                 <rect key="frame" x="16" y="59" width="343" height="105"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cyan="0.94628250838926176" magenta="0.0" yellow="0.97517302852348997" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="backgroundColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.020134228187919462" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <fontDescription key="fontDescription" name="AndaleMono" family="Andale Mono" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xsq-ih-gMd">
                                 <rect key="frame" x="16" y="254" width="343" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cyan="0.94628250838926176" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <color key="backgroundColor" cyan="0.037961409395973152" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" cyan="0.73725491762161255" magenta="0.0" yellow="0.64313727617263794" black="0.87058824300765991" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderwidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="button1Press:" destination="q0I-qE-LJe" eventType="touchUpInside" id="ep8-If-fxz"/>
                                 </connections>
@@ -82,7 +101,10 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q0O-8m-S0q">
                                 <rect key="frame" x="16" y="358" width="343" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cyan="0.94628250840000006" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <color key="backgroundColor" cyan="0.040000000000000001" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="button2Press:" destination="q0I-qE-LJe" eventType="touchUpInside" id="eNB-TK-HH6"/>
                                 </connections>
@@ -90,7 +112,10 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uFe-ya-ggJ">
                                 <rect key="frame" x="16" y="451" width="343" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cyan="0.94628250840000006" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <color key="backgroundColor" cyan="0.040000000000000001" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="button3Press:" destination="q0I-qE-LJe" eventType="touchUpInside" id="3HP-iE-ofp"/>
                                 </connections>
@@ -98,7 +123,10 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edQ-4D-aEf">
                                 <rect key="frame" x="16" y="553" width="343" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <color key="backgroundColor" cyan="0.040000000000000001" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="button4Press:" destination="q0I-qE-LJe" eventType="touchUpInside" id="vS0-yN-A5Y"/>
                                 </connections>
@@ -117,6 +145,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="75K-4p-3cS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1336.8" y="138.98050974512745"/>
+        </scene>
+        <!--My List Surveys View Controller-->
+        <scene sceneID="NQ9-Ch-d1B">
+            <objects>
+                <viewController id="84d-bz-SmS" customClass="MyListSurveysViewController" customModule="YouTellMeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qiR-xT-tHU"/>
+                        <viewControllerLayoutGuide type="bottom" id="R03-3y-UpS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="L3e-bP-HvE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wVt-cE-z0q">
+                                <rect key="frame" x="0.0" y="42" width="375" height="625"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="O2k-JD-XTe">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="O2k-JD-XTe" id="j3R-OM-3At">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="84d-bz-SmS" id="u1W-CI-kZF"/>
+                                    <outlet property="delegate" destination="84d-bz-SmS" id="EzO-3j-psk"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="R03-3y-UpS" firstAttribute="top" secondItem="wVt-cE-z0q" secondAttribute="bottom" id="76U-dZ-jZm"/>
+                            <constraint firstItem="wVt-cE-z0q" firstAttribute="top" secondItem="L3e-bP-HvE" secondAttribute="top" id="9gE-CG-OWK"/>
+                            <constraint firstItem="wVt-cE-z0q" firstAttribute="leading" secondItem="L3e-bP-HvE" secondAttribute="leading" id="G5T-RS-z5o"/>
+                            <constraint firstAttribute="trailing" secondItem="wVt-cE-z0q" secondAttribute="trailing" id="wQB-So-yij"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uMg-ae-Dvx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="989.60000000000002" y="814.54272863568224"/>
         </scene>
     </scenes>
 </document>
