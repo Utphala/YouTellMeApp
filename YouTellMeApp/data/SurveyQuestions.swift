@@ -11,6 +11,7 @@ import Foundation
 
 class SurveyQuestions {
     var title : String = ""
+    var surveyID = ""
     var questions = [Question]()
     
     // Constructor to take raw data and convert/deserialize into SurveyQuestions object.
