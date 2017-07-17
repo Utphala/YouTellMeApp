@@ -40,10 +40,28 @@ class SignupViewController: UIViewController {
                         self.performSegue(withIdentifier: "signup", sender: "")
                     }
                 } else {
-                    // Alert
+                    DispatchQueue.main.async {
+                        self.showInputDialog(title: "Signup failed!", message: "Please retry again later!")
+                    }
                 }
             })
+        } else {
+            self.showInputDialog(title: "Alert \(name)", message: "Hello \(name) password values don't match. Retry!")
         }
     }
     
+    func showInputDialog(title titl: String, message msg: String) {
+        //Creating UIAlertController and
+        //Setting title and message for the alert dialog
+        let alertController = UIAlertController(title: titl, message: msg, preferredStyle: .alert)
+        
+        //the cancel action doing nothing
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (_) in }
+        
+        //adding the action to dialogbox
+        alertController.addAction(cancelAction)
+        
+        //finally presenting the dialog box
+        self.present(alertController, animated: true, completion: nil)
+    }
 }
