@@ -14,6 +14,9 @@
 		DF1505891F1BCF4D00902E06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF1505871F1BCF4D00902E06 /* LaunchScreen.storyboard */; };
 		DF1505941F1BCF4D00902E06 /* YouTellMeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1505931F1BCF4D00902E06 /* YouTellMeAppTests.swift */; };
 		DF15059F1F1BCF4D00902E06 /* YouTellMeAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF15059E1F1BCF4D00902E06 /* YouTellMeAppUITests.swift */; };
+		DF1505AD1F1BD6FE00902E06 /* QnAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1505AC1F1BD6FE00902E06 /* QnAViewController.swift */; };
+		DF1505AF1F1C0A2500902E06 /* SurveyQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1505AE1F1C0A2500902E06 /* SurveyQuestions.swift */; };
+		DF1505B11F1C0B1900902E06 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1505B01F1C0B1900902E06 /* Question.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		DF15059A1F1BCF4D00902E06 /* YouTellMeAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YouTellMeAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF15059E1F1BCF4D00902E06 /* YouTellMeAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTellMeAppUITests.swift; sourceTree = "<group>"; };
 		DF1505A01F1BCF4D00902E06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF1505AC1F1BD6FE00902E06 /* QnAViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QnAViewController.swift; sourceTree = "<group>"; };
+		DF1505AE1F1C0A2500902E06 /* SurveyQuestions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SurveyQuestions.swift; path = data/SurveyQuestions.swift; sourceTree = "<group>"; };
+		DF1505B01F1C0B1900902E06 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Question.swift; path = data/Question.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,9 @@
 				DF1505851F1BCF4D00902E06 /* Assets.xcassets */,
 				DF1505871F1BCF4D00902E06 /* LaunchScreen.storyboard */,
 				DF15058A1F1BCF4D00902E06 /* Info.plist */,
+				DF1505AC1F1BD6FE00902E06 /* QnAViewController.swift */,
+				DF1505AE1F1C0A2500902E06 /* SurveyQuestions.swift */,
+				DF1505B01F1C0B1900902E06 /* Question.swift */,
 			);
 			path = YouTellMeApp;
 			sourceTree = "<group>";
@@ -259,7 +268,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF1505B11F1C0B1900902E06 /* Question.swift in Sources */,
 				DF1505811F1BCF4D00902E06 /* ViewController.swift in Sources */,
+				DF1505AF1F1C0A2500902E06 /* SurveyQuestions.swift in Sources */,
+				DF1505AD1F1BD6FE00902E06 /* QnAViewController.swift in Sources */,
 				DF15057F1F1BCF4D00902E06 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,6 +517,7 @@
 				DF1505A51F1BCF4D00902E06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DF1505A61F1BCF4D00902E06 /* Build configuration list for PBXNativeTarget "YouTellMeAppTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +526,7 @@
 				DF1505A81F1BCF4D00902E06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DF1505A91F1BCF4D00902E06 /* Build configuration list for PBXNativeTarget "YouTellMeAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +535,7 @@
 				DF1505AB1F1BCF4D00902E06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
