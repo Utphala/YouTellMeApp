@@ -16,6 +16,7 @@ class BackendServiceClient {
     let GET_SURVEY_API = "get_survey";
     let SUBMIT_RESPONSE_API = "submit_survey"
     let LIST_SURVEY_API = "list_surveys"
+    let SIGNUP_API = "register"
     let LOGIN = "login"
 
     func getSurveyQuestions(surveyID id : String, notificationCallback callback: @escaping (SurveyQuestions, Bool) -> Void) {
@@ -142,6 +143,41 @@ class BackendServiceClient {
         }
         task.resume()
     }
+    
+    
+    func signup(email id: String, password passwd: String, fullname name: String, callback: @escaping (Bool) -> Void ) {
+        let signupURL:String = "\(ENDPOINT)/\(SIGNUP_API)";
+        var userResponse = [String:String]()
+        userResponse["user_name"] = id
+        userResponse["password"] = passwd
+        userResponse["fname"] = name
+        do {
+            let data = try? JSONSerialization.data(withJSONObject: userResponse, options: [])
+            print("TO URL: \(signupURL)")
+            print("Submitting data: \(data)")
+            guard let url = URL(string: signupURL) else {
+                print("Error: cannot create URL")
+                return
+            }
+            var urlRequest = URLRequest(url: url)
+            urlRequest.httpMethod = "POST"
+            urlRequest.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+            urlRequest.httpBody = data
+            
+            let session = URLSession.shared
+            let task = session.dataTask(with: urlRequest) { data, response, error in
+                let returnCode:HTTPURLResponse = (response! as? HTTPURLResponse) ?? HTTPURLResponse()
+                print("Response code from service: \(returnCode.statusCode)")
+                if returnCode.statusCode == self.HTTP_OK {
+                    callback(true)
+                } else {
+                    callback(false)
+                }
+            }
+            task.resume()
+        }
+    }
+
 
     
 }
