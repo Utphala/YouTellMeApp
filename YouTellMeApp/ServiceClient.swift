@@ -16,6 +16,7 @@ class BackendServiceClient {
     let GET_SURVEY_API = "get_survey";
     let SUBMIT_RESPONSE_API = "submit_survey"
     let LIST_SURVEY_API = "list_surveys"
+    let LOGIN = "login"
 
     func getSurveyQuestions(surveyID id : String, notificationCallback callback: @escaping (SurveyQuestions, Bool) -> Void) {
         let getSurveyURL: String = "\(ENDPOINT)/\(GET_SURVEY_API)/\(id)";
@@ -77,7 +78,7 @@ class BackendServiceClient {
             task.resume()
         }
     }
-    
+
     func listSurveys(callback: @escaping([SurveyPointer], Bool) -> Void) {
         let listSurveyURL:String = "\(ENDPOINT)/\(LIST_SURVEY_API)";
         print("Calling URL \(listSurveyURL)")
@@ -114,5 +115,33 @@ class BackendServiceClient {
         }
         task.resume()
     }
+    
+    
+    func login(username id : String, password passwd: String, notificationCallback callback: @escaping (Bool) -> Void) {
+        let getSurveyURL: String = "\(ENDPOINT)/\(LOGIN)/\(id)/\(passwd)";
+        print("Calling URL \(getSurveyURL)")
+        guard let url = URL(string: getSurveyURL) else {
+            print("Error: cannot create URL")
+            return
+        }
+        let urlRequest = URLRequest(url: url)
+
+        let session = URLSession.shared
+        let task = session.dataTask(with: urlRequest) { data, response, error in
+            do {
+                let returnCode:HTTPURLResponse = (response! as? HTTPURLResponse) ?? HTTPURLResponse()
+
+                if returnCode.statusCode == self.HTTP_OK {
+                    // Signin successful - inform the user. Yay!
+                    callback(true)
+                } else {
+                    // Signin failed for whatever reason - failure is a failure
+                    callback(false)
+                }
+            }
+        }
+        task.resume()
+    }
+
     
 }
