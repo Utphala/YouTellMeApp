@@ -9,10 +9,10 @@
 import UIKit
 
 class MyListSurveysViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    var lookup: [String:String] = [String:String]() // Title to ID lookup map for easy use
     var surveys: [SurveyPointer] = [SurveyPointer]()
     // Hacky? - need it to update the count after netword call is done.
     var tableViewCopy: UITableView = UITableView()
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +36,9 @@ class MyListSurveysViewController: UIViewController, UITableViewDelegate, UITabl
                     print("Fetched survey data!")
                     self.surveys = surveys
                     self.tableViewCopy.reloadData()
+                    for sv in self.surveys {
+                        self.lookup[sv.title] = sv.id
+                    }
                 }
             } else {
                 DispatchQueue.main.async {
@@ -46,11 +49,10 @@ class MyListSurveysViewController: UIViewController, UITableViewDelegate, UITabl
         })
         
     }
-    
+
     
     // Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
     // Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
-    
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
@@ -61,7 +63,20 @@ class MyListSurveysViewController: UIViewController, UITableViewDelegate, UITabl
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedIndex = tableView.indexPathForSelectedRow
         let currentCell = tableView.cellForRow(at: indexPath)! as UITableViewCell
+        let title = currentCell.textLabel!.text!
         print(currentCell.textLabel!.text!)
+        performSegue(withIdentifier: "surveylist", sender: lookup[title])
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "surveylist" {
+            let qnaController = segue.destination as! QnAViewController
+            var surveyID = sender as! String
+            surveyID = surveyID.replacingOccurrences(of: "\"", with: "")
+            print("Prepare has surveyID \(surveyID)")
+            qnaController.surveyID = surveyID
+        }
     }
     
     /*

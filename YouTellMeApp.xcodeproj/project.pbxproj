@@ -19,6 +19,8 @@
 		DF1505B11F1C0B1900902E06 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1505B01F1C0B1900902E06 /* Question.swift */; };
 		DF1505B51F1C492600902E06 /* ServiceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1505B41F1C492600902E06 /* ServiceClient.swift */; };
 		DF1505B71F1C52C600902E06 /* SurveyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1505B61F1C52C600902E06 /* SurveyResponse.swift */; };
+		DF36C3B41F1C9CA3009C35BA /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF36C3B31F1C9CA3009C35BA /* SignInViewController.swift */; };
+		DF36C3B61F1C9D5F009C35BA /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF36C3B51F1C9D5F009C35BA /* SignupViewController.swift */; };
 		DFE7DE2A1F1C7240005D5F69 /* MyListSurveysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE7DE291F1C7240005D5F69 /* MyListSurveysViewController.swift */; };
 		DFE7DE2E1F1C8537005D5F69 /* SurveyPointer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE7DE2D1F1C8537005D5F69 /* SurveyPointer.swift */; };
 /* End PBXBuildFile section */
@@ -59,6 +61,8 @@
 		DF1505B01F1C0B1900902E06 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Question.swift; path = data/Question.swift; sourceTree = "<group>"; };
 		DF1505B41F1C492600902E06 /* ServiceClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceClient.swift; sourceTree = "<group>"; };
 		DF1505B61F1C52C600902E06 /* SurveyResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SurveyResponse.swift; path = data/SurveyResponse.swift; sourceTree = "<group>"; };
+		DF36C3B31F1C9CA3009C35BA /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		DF36C3B51F1C9D5F009C35BA /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		DFE7DE291F1C7240005D5F69 /* MyListSurveysViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyListSurveysViewController.swift; sourceTree = "<group>"; };
 		DFE7DE2D1F1C8537005D5F69 /* SurveyPointer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyPointer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,6 +129,8 @@
 				DF1505B61F1C52C600902E06 /* SurveyResponse.swift */,
 				DFE7DE291F1C7240005D5F69 /* MyListSurveysViewController.swift */,
 				DFE7DE2D1F1C8537005D5F69 /* SurveyPointer.swift */,
+				DF36C3B31F1C9CA3009C35BA /* SignInViewController.swift */,
+				DF36C3B51F1C9D5F009C35BA /* SignupViewController.swift */,
 			);
 			path = YouTellMeApp;
 			sourceTree = "<group>";
@@ -290,12 +296,14 @@
 			files = (
 				DF1505B11F1C0B1900902E06 /* Question.swift in Sources */,
 				DF1505811F1BCF4D00902E06 /* ViewController.swift in Sources */,
+				DF36C3B61F1C9D5F009C35BA /* SignupViewController.swift in Sources */,
 				DFE7DE2E1F1C8537005D5F69 /* SurveyPointer.swift in Sources */,
 				DFE7DE2A1F1C7240005D5F69 /* MyListSurveysViewController.swift in Sources */,
 				DF1505AF1F1C0A2500902E06 /* SurveyQuestions.swift in Sources */,
 				DF1505AD1F1BD6FE00902E06 /* QnAViewController.swift in Sources */,
 				DF1505B71F1C52C600902E06 /* SurveyResponse.swift in Sources */,
 				DF1505B51F1C492600902E06 /* ServiceClient.swift in Sources */,
+				DF36C3B41F1C9CA3009C35BA /* SignInViewController.swift in Sources */,
 				DF15057F1F1BCF4D00902E06 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
