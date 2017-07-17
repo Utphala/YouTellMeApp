@@ -36,22 +36,27 @@ class QnAViewController: UIViewController {
                 
                 let unwarpedData = data ?? Data()
                 self.surveyQuestion = SurveyQuestions(json: unwarpedData)
-                self.nextQuestion()  // We load only once we have data
                 print("Survey Questions: \(self.surveyQuestion)")
+                DispatchQueue.main.async {
+                    self.nextQuestion()  // We load only once we have data
+                }
             } catch {
                 print("Failed to get SurveyQuestion!")
             }
         }
         task.resume()
+
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
         print("QnA is called!")
         getSurveyData()
         print("QnA received data!")
     }
-
     
     func nextQuestion() {
         if self.surveyQuestion.questions.isEmpty {
