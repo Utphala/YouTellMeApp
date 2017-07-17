@@ -12,7 +12,7 @@ import Foundation
 class BackendServiceClient {
     let HTTP_OK: Int = 200
     
-    let ENDPOINT: String = "http://192.168.86.38:8081";
+    let ENDPOINT: String = "http://localhost:8081";
     let GET_SURVEY_API = "get_survey";
     let SUBMIT_RESPONSE_API = "submit_survey"
     let LIST_SURVEY_API = "list_surveys"

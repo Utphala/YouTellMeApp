@@ -48,7 +48,26 @@ class SignInViewController: UIViewController {
                 }
             } else {
                 // Do nothing- maybe show alertbox?
+                DispatchQueue.main.async {
+                    self.showInputDialog()
+                }
+
             }
         })
+    }
+    
+    func showInputDialog() {
+        //Creating UIAlertController and
+        //Setting title and message for the alert dialog
+        let alertController = UIAlertController(title: "Signin failed!", message: "Please check login details and retry", preferredStyle: .alert)
+        
+        //the cancel action doing nothing
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (_) in }
+        
+        //adding the action to dialogbox
+        alertController.addAction(cancelAction)
+        
+        //finally presenting the dialog box
+        self.present(alertController, animated: true, completion: nil)
     }
 }

@@ -90,6 +90,8 @@ class QnAViewController: UIViewController {
             if isSuccess {
                 DispatchQueue.main.async {
                     self.concludeSurvey(message: "Successfully saved response! Thank you!", btnMsg: "Exit")
+                    sleep(1)
+                    self.performSegue(withIdentifier: "to_home_page", sender: "")
                 }
                 
             } else {

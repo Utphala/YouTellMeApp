@@ -146,6 +146,7 @@
                         <outlet property="buttonOpt3" destination="uFe-ya-ggJ" id="uo1-yE-kvI"/>
                         <outlet property="buttonOpt4" destination="edQ-4D-aEf" id="QZZ-Rc-gEy"/>
                         <outlet property="questionbox" destination="ZMZ-dS-gTb" id="ENO-oD-50C"/>
+                        <segue destination="NOS-Sl-h8Q" kind="show" identifier="to_home_page" id="0xg-Lt-vFb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="75K-4p-3cS" userLabel="First Responder" sceneMemberID="firstResponder"/>
